@@ -1,0 +1,28 @@
+<app-toast-container></app-toast-container>
+
+<button routerLink="/dashboard" class="back-button">Back to Dashboard</button>
+
+<h1>Dashboard Works!</h1>
+<p>Welcome to the Dashboard!</p>
+
+<section class="actions">
+  <button class="primary" routerLink="/courses">View Courses</button>
+  <button class="secondary" routerLink="/profile">Profile Settings</button>
+</section>
+
+<section class="info">
+  <h2>You Progress</h2>
+  <p>
+    You have completed <strong>3</strong> out of <strong>10</strong> courses.
+  </p>
+</section>
+
+<section class="courses">
+  <h2>Available Courses</h2>
+  <ul>
+    <li *ngFor="let course of courses">
+      <h3>{{ course.title }}</h3>
+      <p>{{ course.description }}</p>
+    </li>
+  </ul>
+</section>

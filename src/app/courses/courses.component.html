@@ -1,0 +1,28 @@
+<app-toast-container></app-toast-container>
+<!-- 🔵 Kontener powiadomień -->
+
+<button routerLink="/dashboard" class="back-button">Back to Dashboard</button>
+
+<h1>Courses</h1>
+<p>Here you can browse and manage courses.</p>
+
+<input
+  type="text"
+  [(ngModel)]="searchTerm"
+  placeholder="Search coiurses"
+  class="search-input"
+/>
+
+<button (click)="toggleSortOrder()" class="sort-button">
+  Sort: {{ sortAscending ? "Ascending" : "Descending" }}
+</button>
+
+<ul class="course-list">
+  <li *ngFor="let course of filteredAndSortedCourses" class="course-item">
+    <h2>{{ course.title }}</h2>
+    <p>{{ course.description }}</p>
+    <button routerLink="/courses/{{ course.id }}" class="details-button">
+      View Details
+    </button>
+  </li>
+</ul>

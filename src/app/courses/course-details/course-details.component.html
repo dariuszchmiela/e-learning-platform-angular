@@ -1,0 +1,8 @@
+<h1>Course Details</h1>
+<p *ngIf="!course">Loading...</p>
+
+<div *ngIf="course">
+  <h2>{{ course.title }}</h2>
+  <p>{{ course.description }}</p>
+  <button routerLink="/courses" class="back-button">Back to Courses</button>
+</div>

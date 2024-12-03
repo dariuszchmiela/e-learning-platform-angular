@@ -1,0 +1,37 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Angular Basics",
+      "description": "Learn the basics of Angular step by step."
+    },
+    {
+      "id": "2",
+      "title": "RxJS Advanced",
+      "description": "Master reactive programming with RxJS."
+    },
+    {
+      "id": "3",
+      "title": "TypeScript Deep Dive",
+      "description": "Get a deep understanding of TypeScript."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Dariusz",
+      "lastName": "Chmiela",
+      "email": "dariusz.chmiela@gmail.com",
+      "password": "Tekken3i5",
+      "token": "fake-jwt-token"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "token": "john-jwt-token"
+    }
+  ]
+}

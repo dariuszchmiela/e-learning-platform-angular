@@ -1,0 +1,46 @@
+<app-toast-container></app-toast-container>
+
+<h1>Edit Profile</h1>
+<button routerLink="/dashboard" class="back-button">Back</button>
+
+<form [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+  <div>
+    <label for="firstName">First Name</label>
+    <input id="firstName" formControlName="firstName" />
+    <p
+      *ngIf="
+        profileForm.get('firstName')?.invalid &&
+        profileForm.get('firstName')?.touched
+      "
+    >
+      First name is required and must be at least 2 characters long.
+    </p>
+
+    <div>
+      <label for="lastName">Last Name</label>
+      <input id="lastName" formControlName="lastName" />
+      <p
+        *ngIf="
+          profileForm.get('lastName')?.invalid &&
+          profileForm.get('lastName')?.touched
+        "
+      >
+        Last name is required and must be at least 2 characters long.
+      </p>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" />
+      <p
+        *ngIf="
+          profileForm.get('email')?.invalid && profileForm.get('email')?.touched
+        "
+      >
+        Please enter a valid email address.
+      </p>
+    </div>
+
+    <button type="submit" [disabled]="loading">Save</button>
+  </div>
+</form>
